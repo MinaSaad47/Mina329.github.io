@@ -1,0 +1,636 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lectures 3 &amp; 4 &amp; 5 Test Bank ISTQB v1.7 - QA Exercises</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "rust" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="exercise_1.html"><strong aria-hidden="true">1.</strong> Lecture 1 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_2.html"><strong aria-hidden="true">2.</strong> Lecture 2 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_3.html"><strong aria-hidden="true">3.</strong> Lecture 3 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_4.html"><strong aria-hidden="true">4.</strong> Lecture 4 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_5.html"><strong aria-hidden="true">5.</strong> Lecture 5 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_6.html"><strong aria-hidden="true">6.</strong> Lecture 6 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_7.html"><strong aria-hidden="true">7.</strong> Lecture 7 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_8.html"><strong aria-hidden="true">8.</strong> Lecture 8 Exercises</a></li><li class="chapter-item expanded "><a href="test_bank_3_4_5.html" class="active"><strong aria-hidden="true">9.</strong> Lectures 3 & 4 & 5 Test Bank ISTQB v1.7</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">QA Exercises</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="test-bank-on-lectures-345"><a class="header" href="#test-bank-on-lectures-345">Test Bank on lectures 3,4,5</a></h1>
+<h2 id="1-which-one-of-the-following-answers-describes-a-test-condition"><a class="header" href="#1-which-one-of-the-following-answers-describes-a-test-condition">1. Which one of the following answers describes a test condition?</a></h2>
+<ul>
+<li>a) A distinguishing characteristic of a component or system</li>
+<li>b) A testable aspect of a component or system identified as a basis for testing</li>
+<li>c) The degree to which a software product provides functions which meet stated and implied
+needs when the software is used under specified conditions</li>
+<li>d) Test cases designed to execute combinations of conditions and actions resulting from them</li>
+</ul>
+<h2 id="2-which-of-the-following-statements-is-a-valid-objective-for-testing"><a class="header" href="#2-which-of-the-following-statements-is-a-valid-objective-for-testing">2. Which of the following statements is a valid objective for testing?</a></h2>
+<ul>
+<li>a) The test should start as late as possible so that development had enough time to create a
+good product</li>
+<li>b) To validate whether the test object works as expected by the users and other stakeholders</li>
+<li>c) To prove that all possible defects are identified</li>
+<li>d) To prove that any remaining defects will not cause any failures</li>
+</ul>
+<h2 id="3-which-of-the-following-statements-correctly-describes-the-difference-between-testing-and-debugging"><a class="header" href="#3-which-of-the-following-statements-correctly-describes-the-difference-between-testing-and-debugging">3. Which of the following statements correctly describes the difference between testing and debugging?</a></h2>
+<ul>
+<li>a) Testing identifies the source of defects; debugging analyzes the defects and proposes
+prevention activities</li>
+<li>b) Dynamic testing shows failures caused by defects; debugging eliminates the defects, which</li>
+<li>are the source of failures</li>
+<li>c) Testing removes faults; but debugging removes defects that cause the faults</li>
+<li>d) Dynamic testing prevents the causes of failures; debugging removes the failures</li>
+</ul>
+<h2 id="4-which-one-of-the-statements-below-describes-the-most-common-situation-for-a-failure-discovered-during-testing-or-in-production"><a class="header" href="#4-which-one-of-the-statements-below-describes-the-most-common-situation-for-a-failure-discovered-during-testing-or-in-production">4. Which one of the statements below describes the most common situation for a failure discovered during testing or in production?</a></h2>
+<ul>
+<li>a) The product crashed when the user selected an option in a dialog box</li>
+<li>b) The wrong version of a compiled source code file was included in the build</li>
+<li>c) The computation algorithm used the wrong input variables</li>
+<li>d) The developer misinterpreted the requirement for the algorithm</li>
+</ul>
+<h2 id="5-mr-test-has-been-testing-software-applications-on-mobile-devices-for-a-period-of-5-years-he-has-a-wealth-of-experience-in-testing-mobile-applications-and-achieves-better-results-in-a-shorter-time-than-others-over-several-months-mr-test-did-not-modify-the-existing-automated-test-cases-and-did-not-create-any-new-test-cases-this-leads-to-fewer-and-fewer-defects-being-found-by-executing-the-tests-what-principle-of-testing-did-mr-test-not-observe"><a class="header" href="#5-mr-test-has-been-testing-software-applications-on-mobile-devices-for-a-period-of-5-years-he-has-a-wealth-of-experience-in-testing-mobile-applications-and-achieves-better-results-in-a-shorter-time-than-others-over-several-months-mr-test-did-not-modify-the-existing-automated-test-cases-and-did-not-create-any-new-test-cases-this-leads-to-fewer-and-fewer-defects-being-found-by-executing-the-tests-what-principle-of-testing-did-mr-test-not-observe">5. Mr. Test has been testing software applications on mobile devices for a period of 5 years. He has a wealth of experience in testing mobile applications and achieves better results in a shorter time than others. Over several months, Mr. Test did not modify the existing automated test cases and did not create any new test cases. This leads to fewer and fewer defects being found by executing the tests. What principle of testing did Mr. Test not observe?</a></h2>
+<ul>
+<li>a) Testing depends on the environment</li>
+<li>b) Exhaustive testing is not possible</li>
+<li>c) Repeating of same tests will not find new defects</li>
+<li>d) Defects cluster together</li>
+</ul>
+<h2 id="6-in-what-way-can-testing-be-part-of-quality-assurance"><a class="header" href="#6-in-what-way-can-testing-be-part-of-quality-assurance">6. In what way can testing be part of Quality Assurance?</a></h2>
+<ul>
+<li>a) It ensures that requirements are detailed enough</li>
+<li>b) Testing reduces the risk of poor software quality</li>
+<li>c) It ensures that standards in the organization are followed</li>
+<li>d) It measures the quality of software in terms of number of executed test cases</li>
+</ul>
+<h2 id="7-which-of-the-following-activities-is-part-of-the-main-activity-test-analysis-in-the-test-process"><a class="header" href="#7-which-of-the-following-activities-is-part-of-the-main-activity-test-analysis-in-the-test-process">7. Which of the following activities is part of the main activity &quot;test analysis&quot; in the test process?</a></h2>
+<ul>
+<li>a) Identifying any required infrastructure and tools</li>
+<li>b) Creating test suites from test scripts</li>
+<li>c) Analyzing lessons learned for process improvement</li>
+<li>d) Evaluating the test basis for testability</li>
+</ul>
+<h2 id="8-match-the-following-test-work-products-1-4-with-the-right-description-a-d"><a class="header" href="#8-match-the-following-test-work-products-1-4-with-the-right-description-a-d">8. Match the following test work products (1-4) with the right description (A-D).</a></h2>
+<ol>
+<li>Test suite</li>
+<li>Test case</li>
+<li>Test script</li>
+<li>Test charter</li>
+</ol>
+<ul>
+<li>A. A set of test scripts to be executed in a specific test run</li>
+<li>B. A set of instructions for the execution of a test</li>
+<li>C. Contains expected results</li>
+<li>D. Documentation of test activities in session-based exploratory testing</li>
+</ul>
+<ul>
+<li>a) 1A, 2C, 3B, 4D</li>
+<li>b) 1D, 2B, 3A, 4C</li>
+<li>c) 1A, 2C, 3D, 4B</li>
+<li>d) 1D, 2C, 3B, 4A</li>
+</ul>
+<h2 id="9-how-can-white-box-testing-be-applied-during-user-acceptance-testing"><a class="header" href="#9-how-can-white-box-testing-be-applied-during-user-acceptance-testing">9. How can white-box testing be applied during user acceptance testing?</a></h2>
+<ul>
+<li>a) To check if large volumes of data can be transferred between integrated systems</li>
+<li>b) To check if all code statements and code decision paths have been executed</li>
+<li>c) To check if all work process flows have been covered</li>
+<li>d) To cover all web page navigations</li>
+</ul>
+<h2 id="10-which-of-the-following-statements-comparing-component-testing-and-system-testing-is-true"><a class="header" href="#10-which-of-the-following-statements-comparing-component-testing-and-system-testing-is-true">10. Which of the following statements comparing component testing and system testing is TRUE?</a></h2>
+<ul>
+<li>a) Component testing verifies the functionality of software modules, program objects, and
+classes that are separately testable, whereas system testing verifies interfaces between
+components and interactions between different parts of the system</li>
+<li>b) Test cases for component testing are usually derived from component specifications,
+design specifications, or data models, whereas test cases for system testing are usually
+derived from requirement specifications or use cases</li>
+<li>c) Component testing only focuses on functional characteristics, whereas system testing
+focuses on functional and non-functional characteristics</li>
+<li>d) Component testing is the responsibility of the testers, whereas system testing typically is
+the responsibility of the users of the system</li>
+</ul>
+<h2 id="11-which-one-of-the-following-is-true"><a class="header" href="#11-which-one-of-the-following-is-true">11. Which one of the following is TRUE?</a></h2>
+<ul>
+<li>a) The purpose of regression testing is to check if the correction has been successfully
+implemented, while the purpose of confirmation testing is to confirm that the correction has
+no side effects</li>
+<li>b) The purpose of regression testing is to detect unintended side effects, while the purpose of
+confirmation testing is to check if the system is still working in a new environment</li>
+<li>c) The purpose of regression testing is to detect unintended side effects, while the purpose of
+confirmation testing is to check if the original defect has been fixed</li>
+<li>d) The purpose of regression testing is to check if the new functionality is working, while the
+purpose of confirmation testing is to check if the original defect has been fixed</li>
+</ul>
+<h2 id="12-which-one-of-the-following-is-the-best-definition-of-an-incremental-development-model"><a class="header" href="#12-which-one-of-the-following-is-the-best-definition-of-an-incremental-development-model">12. Which one of the following is the BEST definition of an incremental development model?</a></h2>
+<ul>
+<li>a) Defining requirements, designing software and testing are done in phases where in each
+phase a piece of the system is added</li>
+<li>b) A phase in the development process should begin when the previous phase is complete</li>
+<li>c) Testing is viewed as a separate phase which takes place after development has been
+completed</li>
+<li>d) Testing is added to development as an increment</li>
+</ul>
+<h2 id="13-which-of-the-following-should-not-be-a-trigger-for-maintenance-testing"><a class="header" href="#13-which-of-the-following-should-not-be-a-trigger-for-maintenance-testing">13. Which of the following should NOT be a trigger for maintenance testing?</a></h2>
+<ul>
+<li>a) Decision to test the maintainability of the software</li>
+<li>b) Decision to test the system after migration to a new operating platform</li>
+<li>c) Decision to test if archived data is possible to be retrieved</li>
+<li>d) Decision to test after “hot fixes”</li>
+</ul>
+<h2 id="14-which-of-the-following-options-are-roles-in-a-formal-review"><a class="header" href="#14-which-of-the-following-options-are-roles-in-a-formal-review">14. Which of the following options are roles in a formal review?</a></h2>
+<ul>
+<li>a) Developer, Moderator, Review leader, Reviewer, Tester</li>
+<li>b) Author, Moderator, Manager, Reviewer, Developer</li>
+<li>c) Author, Manager, Review leader, Reviewer, Designer</li>
+<li>d) Author, Moderator, Review leader, Reviewer, Scribe</li>
+</ul>
+<h2 id="15-which-activities-are-carried-out-within-the-planning-of-a-formal-review"><a class="header" href="#15-which-activities-are-carried-out-within-the-planning-of-a-formal-review">15. Which activities are carried out within the planning of a formal review?</a></h2>
+<ul>
+<li>a) Collection of metrics for the evaluation of the effectiveness of the review</li>
+<li>b) Answer any questions the participants may have</li>
+<li>c) Definition and Verification of fulfillment of entry criteria for the review</li>
+<li>d) Evaluation of the review findings against the exit criteria</li>
+</ul>
+<h2 id="16-which-of-the-review-types-below-is-the-best-option-to-choose-when-the-review-must-follow-a-formal-process-based-on-rules-and-checklists"><a class="header" href="#16-which-of-the-review-types-below-is-the-best-option-to-choose-when-the-review-must-follow-a-formal-process-based-on-rules-and-checklists">16. Which of the review types below is the BEST option to choose when the review must follow a formal process based on rules and checklists?</a></h2>
+<ul>
+<li>a) Informal Review</li>
+<li>b) Technical Review</li>
+<li>c) Inspection</li>
+<li>d) Walkthrough</li>
+</ul>
+<h2 id="17-which-of-the-following-statements-about-static-testing-are-most-true"><a class="header" href="#17-which-of-the-following-statements-about-static-testing-are-most-true">17. Which of the following statements about static testing are MOST true?</a></h2>
+<ul>
+<li>a) Static testing is a cheap way to detect and remove defects</li>
+<li>b) Static testing makes dynamic testing less challenging</li>
+<li>c) Static testing makes it possible to find run-time problems early in the lifecycle</li>
+<li>d) When testing safety-critical system, static testing has less value because dynamic testing
+finds the defects better</li>
+</ul>
+<h2 id="18-you-will-be-invited-to-a-review-the-work-product-to-be-reviewed-is-a-description-of-the-in-house-document-creation-process-the-aim-of-the-description-is-to-present-the-work-distribution-between-the-different-roles-involved-in-the-process-in-a-way-that-can-be-clearly-understood-by-everyone-you-will-be-invited-to-a-checklist-based-review-the-checklist-will-also-be-sent-to-you-it-includes-the-following-points"><a class="header" href="#18-you-will-be-invited-to-a-review-the-work-product-to-be-reviewed-is-a-description-of-the-in-house-document-creation-process-the-aim-of-the-description-is-to-present-the-work-distribution-between-the-different-roles-involved-in-the-process-in-a-way-that-can-be-clearly-understood-by-everyone-you-will-be-invited-to-a-checklist-based-review-the-checklist-will-also-be-sent-to-you-it-includes-the-following-points">18. You will be invited to a review. The work product to be reviewed is a description of the in-house document creation process. The aim of the description is to present the work distribution between the different roles involved in the process in a way that can be clearly understood by everyone. You will be invited to a checklist-based review. The checklist will also be sent to you. It includes the following points:</a></h2>
+<blockquote>
+<ul>
+<li>i. Is the person who performs the activity clearly identified for each activity?</li>
+<li>ii. Are the entry criteria clearly defined for each activity?</li>
+<li>iii. Are the exit criteria clearly defined for each activity?</li>
+<li>iv. Are the supporting roles and their scope of work clearly defined for each activity?</li>
+</ul>
+</blockquote>
+<h3 id="in-the-following-we-show-an-excerpt-of-the-work-result-to-be-reviewed-for-which-you-should-use-the-checklist-above"><a class="header" href="#in-the-following-we-show-an-excerpt-of-the-work-result-to-be-reviewed-for-which-you-should-use-the-checklist-above">In the following we show an excerpt of the work result to be reviewed, for which you should use the checklist above:</a></h3>
+<blockquote>
+<blockquote>
+<p>&quot;After checking the customer documentation for completeness and correctness, the software
+architect creates the system specification. Once the software architect has completed the system
+specification, he invites testers and verifiers to the review. A checklist describes the scope of the
+review. Each invited reviewer creates review comments - if necessary - and concludes the review
+with an official review done-comment.&quot;</p>
+</blockquote>
+</blockquote>
+<h3 id="which-of-the-following-statements-about-your-review-is-correct"><a class="header" href="#which-of-the-following-statements-about-your-review-is-correct">Which of the following statements about your review is correct?</a></h3>
+<ul>
+<li>a) Point ii) of the checklist has been violated because it is not clear which condition must be
+fulfilled to invite to the review</li>
+<li>b) You notice that in addition to the tester and the verifier, the validator must also be invited.
+Since this item is not part of your checklist, you do not create a corresponding comment</li>
+<li>c) Point iii) of the checklist has been violated as it is not clear what marks the review as
+completed</li>
+<li>d) Point i) of the checklist has been violated because it is not clear who is providing the
+checklist for the invitation to the review</li>
+</ul>
+<h2 id="19-what-is-checklist-based-testing"><a class="header" href="#19-what-is-checklist-based-testing">19. What is checklist-based testing?</a></h2>
+<ul>
+<li>a) A test technique in which tests are derived based on the tester's knowledge of past faults,
+or general knowledge of failures</li>
+<li>b) A test technique based on an analysis of the specification of a component or system</li>
+<li>c) An experience-based test technique whereby the experienced tester uses a list of items to
+be noted, checked, or remembered, or a set of rules or criteria against which a product
+must be verified</li>
+<li>d) An approach to testing where the testers dynamically design and execute tests based on
+their knowledge, exploration of the test item and the results of previous tests</li>
+</ul>
+<h2 id="20-which-one-of-the-following-options-is-categorized-as-a-black-box-test-technique"><a class="header" href="#20-which-one-of-the-following-options-is-categorized-as-a-black-box-test-technique">20. Which one of the following options is categorized as a black-box test technique?</a></h2>
+<ul>
+<li>a) A technique based on analysis of the architecture</li>
+<li>b) A technique checking that the test object is working according to the detailed design</li>
+<li>c) A technique based on the knowledge of past faults, or general knowledge of failures</li>
+<li>d) A technique based on formal requirements</li>
+</ul>
+<h2 id="21-the-following-statement-refers-to-decision-coverage"><a class="header" href="#21-the-following-statement-refers-to-decision-coverage">21. The following statement refers to decision coverage:</a></h2>
+<blockquote>
+<blockquote>
+<p>“When the code contains only a single ‘if’ statement and no loops or CASE statements, and its
+execution is not nested within the test, any single test case we run will result in 50% decision
+coverage.”</p>
+</blockquote>
+</blockquote>
+<h3 id="which-of-the-following-statement-is-correct"><a class="header" href="#which-of-the-following-statement-is-correct">Which of the following statement is correct?</a></h3>
+<ul>
+<li>a) The statement is true. Any single test case provides 100% statement coverage and
+therefore 50% decision coverage</li>
+<li>b) The statement is true. Any single test case would cause the outcome of the “if” statement to
+be either true or false</li>
+<li>c) The statement is false. A single test case can only guarantee 25% decision coverage in this
+case</li>
+<li>d) The statement is false. The statement is too broad. It may be correct or not, depending on
+the tested software</li>
+</ul>
+<h2 id="22-which-one-of-the-following-is-the-description-of-statement-coverage"><a class="header" href="#22-which-one-of-the-following-is-the-description-of-statement-coverage">22. Which one of the following is the description of statement coverage?</a></h2>
+<ul>
+<li>a) It is a metric, which is the percentage of test cases that have been executed</li>
+<li>b) It is a metric, which is the percentage of statements in the source code that have been
+executed</li>
+<li>c) It is a metric, which is the number of statements in the source code that have been
+executed by test cases that are passed</li>
+<li>d) It is a metric, that gives a true/false confirmation if all statements are covered or not</li>
+</ul>
+<h2 id="23-which-statement-about-the-relationship-between-statement-coverage-and-decision-coverage-is-true"><a class="header" href="#23-which-statement-about-the-relationship-between-statement-coverage-and-decision-coverage-is-true">23. Which statement about the relationship between statement coverage and decision coverage is true?</a></h2>
+<ul>
+<li>a) 100% decision coverage also guarantees 100% statement coverage</li>
+<li>b) 100% statement coverage also guarantees 100% decision coverage</li>
+<li>c) 50% decision coverage also guarantees 50% statement coverage</li>
+<li>d) Decision coverage can never reach 100%</li>
+</ul>
+<h2 id="24-for-which-of-the-following-situations-is-exploratory-testing-suitable"><a class="header" href="#24-for-which-of-the-following-situations-is-exploratory-testing-suitable">24. For which of the following situations is exploratory testing suitable?</a></h2>
+<ul>
+<li>a) When time pressure requires speeding up the execution of tests already specified</li>
+<li>b) When the system is developed incrementally, and no test charter is available</li>
+<li>c) When testers are available who have enough knowledge of similar applications and
+technologies</li>
+<li>d) When an advanced knowledge of the system already exists, and evidence is to be if it
+should be tested intensively</li>
+</ul>
+<h2 id="25-an-employees-bonus-is-to-be-calculated-it-cannot-be-negative-but-it-can-be-calculated-down-to-zero-the-bonus-is-based-on-the-length-of-employment"><a class="header" href="#25-an-employees-bonus-is-to-be-calculated-it-cannot-be-negative-but-it-can-be-calculated-down-to-zero-the-bonus-is-based-on-the-length-of-employment">25. An employee’s bonus is to be calculated. It cannot be negative, but it can be calculated down to zero. The bonus is based on the length of employment:</a></h2>
+<ul>
+<li>Less than or equal to 2 years</li>
+<li>More than 2 years but less than 5 years</li>
+<li>5 to 10 years inclusively</li>
+<li>Longer than 10 years</li>
+</ul>
+<h3 id="what-is-the-minimum-number-of-test-cases-required-to-cover-all-valid-equivalence-partitions-for-calculating-the-bonus"><a class="header" href="#what-is-the-minimum-number-of-test-cases-required-to-cover-all-valid-equivalence-partitions-for-calculating-the-bonus">What is the minimum number of test cases required to cover all valid equivalence partitions for calculating the bonus?</a></h3>
+<ul>
+<li>a) 3</li>
+<li>b) 5</li>
+<li>c) 2</li>
+<li>d) 4</li>
+</ul>
+<h2 id="26-a-speed-control-and-reporting-system-has-the-following-characteristics"><a class="header" href="#26-a-speed-control-and-reporting-system-has-the-following-characteristics">26. A speed control and reporting system has the following characteristics:</a></h2>
+<ul>
+<li>If you drive 50 km/h or less, nothing will happen.</li>
+<li>If you drive faster than 50 km/h, but no more than 55 km/h, you will be warned.</li>
+<li>If you drive faster than 55 km/h but not more than 60 km/h, you will be fined.</li>
+<li>If you drive faster than 60 km/h, your driving license will be suspended.</li>
+<li>The speed in km/h is available to the system as an integer value.</li>
+</ul>
+<h3 id="which-would-be-the-most-likely-set-of-values-kmh-identified-by-applying-the-boundary-value-analysis-where-only-the-values-on-the-boundaries-of-the-equivalence-classes-are-selected"><a class="header" href="#which-would-be-the-most-likely-set-of-values-kmh-identified-by-applying-the-boundary-value-analysis-where-only-the-values-on-the-boundaries-of-the-equivalence-classes-are-selected">Which would be the most likely set of values (km/h) identified by applying the boundary value analysis, where only the values on the boundaries of the equivalence classes are selected?</a></h3>
+<ul>
+<li>a) 0, 49, 50, 54, 59, 60</li>
+<li>b) 50, 55, 60</li>
+<li>c) 49, 50, 54, 55, 60, 62</li>
+<li>d) 50, 51, 55, 56, 60, 61</li>
+</ul>
+<h2 id="27-a-companys-employees-are-paid-bonuses-if-they-work-more-than-a-year-in-the-company-and-achieve-a-target-which-is-individually-agreed-before"><a class="header" href="#27-a-companys-employees-are-paid-bonuses-if-they-work-more-than-a-year-in-the-company-and-achieve-a-target-which-is-individually-agreed-before">27. A company's employees are paid bonuses if they work more than a year in the company and achieve a target which is individually agreed before.</a></h2>
+<h3 id="these-facts-can-be-shown-in-a-decision-table"><a class="header" href="#these-facts-can-be-shown-in-a-decision-table">These facts can be shown in a decision table:</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Test-ID</th><th></th><th>T1</th><th>T2</th><th>T3</th><th>T4</th></tr></thead><tbody>
+<tr><td>Condition1</td><td>Employment for more than 1 year?</td><td>YES</td><td>NO</td><td>NO</td><td>YES</td></tr>
+<tr><td>Condition2</td><td>Agreed target?</td><td>NO</td><td>NO</td><td>YES</td><td>YES</td></tr>
+<tr><td>Condition3</td><td>Achieved target?</td><td>NO</td><td>NO</td><td>YES</td><td>YES</td></tr>
+<tr><td>Action</td><td>Bonus payment</td><td>NO</td><td>NO</td><td>NO</td><td>YES</td></tr>
+</tbody></table>
+</div>
+<h3 id="which-of-the-following-test-cases-represents-a-situation-that-can-happen-in-real-life-and-is-missing-in-the-above-decision-table"><a class="header" href="#which-of-the-following-test-cases-represents-a-situation-that-can-happen-in-real-life-and-is-missing-in-the-above-decision-table">Which of the following test cases represents a situation that can happen in real life, and is missing in the above decision table?</a></h3>
+<ul>
+<li>a) Condition1 = YES, Condition2 = NO, Condition3 = YES, Action= NO</li>
+<li>b) Condition1 = YES, Condition2 = YES, Condition3 = NO, Action= YES</li>
+<li>c) Condition1 = NO, Condition2 = NO, Condition3 = YES, Action= NO</li>
+<li>d) Condition1 = NO, Condition2 = YES, Condition3 = NO, Action= NO </li>
+</ul>
+<h2 id="28-which-of-the-following-statements-about-the-given-state-transition-diagram-and-table-of-test-cases-is-true"><a class="header" href="#28-which-of-the-following-statements-about-the-given-state-transition-diagram-and-table-of-test-cases-is-true">28. Which of the following statements about the given state transition diagram and table of test cases is TRUE?</a></h2>
+<p><img src="images/Q28.PNG" alt="Q28" /></p>
+<div class="table-wrapper"><table><thead><tr><th>Test Case</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody>
+<tr><td>Start State</td><td>S1</td><td>S2</td><td>S2</td><td>S3</td><td>S3</td></tr>
+<tr><td>Input</td><td>Power On</td><td>Power Off</td><td>RC On</td><td>RC Off</td><td>Power Off</td></tr>
+<tr><td>Expected Final State</td><td>S2</td><td>S1</td><td>S3</td><td>S2</td><td>S1</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>a) The given test cases cover both valid and invalid transitions in the state transition diagram</li>
+<li>b) The given test cases represent all possible valid transitions in the state transition diagram</li>
+<li>c) The given test cases represent some of the valid transitions in the state transition diagram</li>
+<li>d) The given test cases represent pairs of transitions in the state transition diagram</li>
+</ul>
+<h2 id="29-a-video-application-has-the-following-requirement-the-application-shall-allow-playing-a-video-on-the-following-display-resolution"><a class="header" href="#29-a-video-application-has-the-following-requirement-the-application-shall-allow-playing-a-video-on-the-following-display-resolution">29. A video application has the following requirement: The application shall allow playing a video on the following display resolution:</a></h2>
+<ol>
+<li>640x480</li>
+<li>1280x720</li>
+<li>1600x1200</li>
+<li>1920x1080</li>
+</ol>
+<h3 id="which-of-the-following-list-of-test-cases-is-a-result-of-applying-the-equivalence-partitioning-test-technique-to-test-this-requirement"><a class="header" href="#which-of-the-following-list-of-test-cases-is-a-result-of-applying-the-equivalence-partitioning-test-technique-to-test-this-requirement">Which of the following list of test cases is a result of applying the equivalence partitioning test technique to test this requirement?</a></h3>
+<ul>
+<li>a) Verify that the application can play a video on a display of size 1920x1080 (1 test case)</li>
+<li>b) Verify that the application can play a video on a display of size 640x480 and 1920x1080 (2
+test cases)</li>
+<li>c) Verify that the application can play a video on each of the display sizes in the requirement
+(4 test cases)</li>
+<li>d) Verify that the application can play a video on any one of the display sizes in the
+requirement (1 test case)</li>
+</ul>
+<h2 id="30-which-of-the-following-statements-best-describes-how-tasks-are-divided-between-the-test-manager-and-the-tester"><a class="header" href="#30-which-of-the-following-statements-best-describes-how-tasks-are-divided-between-the-test-manager-and-the-tester">30. Which of the following statements BEST describes how tasks are divided between the test manager and the tester?</a></h2>
+<ul>
+<li>a) The test manager plans testing activities and chooses the standards to be followed, while
+the tester chooses the tools and set the tools usage guidelines</li>
+<li>b) The test manager plans, coordinates, and controls the testing activities, while the tester
+automates the tests</li>
+<li>c) The test manager plans, monitors, and controls the testing activities, while the tester
+designs tests and decides on the release of the test object</li>
+<li>d) The test manager plans and organizes the testing and specifies the test cases, while the
+tester executes the tests</li>
+</ul>
+<h2 id="31-which-of-the-following-metrics-would-be-most-useful-to-monitor-during-test-execution"><a class="header" href="#31-which-of-the-following-metrics-would-be-most-useful-to-monitor-during-test-execution">31. Which of the following metrics would be MOST useful to monitor during test execution?</a></h2>
+<ul>
+<li>a) Percentage of executed test cases</li>
+<li>b) Average number of testers involved in the test execution</li>
+<li>c) Coverage of requirements by source code</li>
+<li>d) Percentage of test cases already created and reviewed</li>
+</ul>
+<h2 id="32-which-of-the-following-can-affect-and-be-part-of-the-initial-test-planning"><a class="header" href="#32-which-of-the-following-can-affect-and-be-part-of-the-initial-test-planning">32. Which of the following can affect and be part of the (initial) test planning?</a></h2>
+<ul>
+<li>a) Budget limitations</li>
+<li>b) Test log</li>
+<li>c) Failure rate</li>
+<li>d) Use cases</li>
+</ul>
+<h2 id="33-which-of-the-following-lists-contains-only-typical-exit-criteria-from-testing"><a class="header" href="#33-which-of-the-following-lists-contains-only-typical-exit-criteria-from-testing">33. Which of the following lists contains only typical exit criteria from testing?</a></h2>
+<ul>
+<li>a) Reliability measures, test coverage, schedule and status about fixing defect and remaining
+risks</li>
+<li>b) Reliability measures, test coverage, degree of tester’s independence and product
+completeness</li>
+<li>c) Reliability measures, test coverage, test cost, availability of test environment, time to
+market and product completeness</li>
+<li>d) Time to market, remaining defects, tester qualification, availability of testable use cases,
+test coverage and test cost</li>
+</ul>
+<h2 id="34-which-one-of-the-following-is-not-included-in-a-test-summary-report"><a class="header" href="#34-which-one-of-the-following-is-not-included-in-a-test-summary-report">34. Which one of the following is NOT included in a test summary report?</a></h2>
+<ul>
+<li>a) Defining pass/fail criteria and objectives of testing</li>
+<li>b) Deviations from the test approach</li>
+<li>c) Measurements of actual progress against exit criteria</li>
+<li>d) Evaluation of the quality of the test object</li>
+</ul>
+<h2 id="35-the-project-develops-a-smart-heating-thermostat-the-control-algorithms-of-the-thermostat-were-modeled-as-matlabsimulink-models-and-run-on-the-internet-connected-server-the-thermostat-uses-the-specifications-of-the-server-to-trigger-the-heating-valves"><a class="header" href="#35-the-project-develops-a-smart-heating-thermostat-the-control-algorithms-of-the-thermostat-were-modeled-as-matlabsimulink-models-and-run-on-the-internet-connected-server-the-thermostat-uses-the-specifications-of-the-server-to-trigger-the-heating-valves">35. The project develops a &quot;smart&quot; heating thermostat. The control algorithms of the thermostat were modeled as Matlab/Simulink models and run on the internet connected server. The thermostat uses the specifications of the server to trigger the heating valves.</a></h2>
+<h3 id="the-test-manager-has-defined-the-following-test-strategyapproach-in-the-test-plan"><a class="header" href="#the-test-manager-has-defined-the-following-test-strategyapproach-in-the-test-plan">The test manager has defined the following test strategy/approach in the test plan:</a></h3>
+<ol>
+<li>The acceptance test for the whole system is executed as an experience-based test.</li>
+<li>The control algorithms on the server are checked against standard of the energy
+saving regulation.</li>
+<li>The functional test of the thermostat is performed as risk-based testing.</li>
+<li>The security tests of data / communication via the internet are executed together
+with external security experts.</li>
+</ol>
+<h3 id="what-four-common-types-of-test-strategiesapproaches-did-the-test-manager-implement-in-the-test-plan"><a class="header" href="#what-four-common-types-of-test-strategiesapproaches-did-the-test-manager-implement-in-the-test-plan">What four common types of test strategies/approaches did the test manager implement in the test plan?</a></h3>
+<ul>
+<li>a) Methodical, analytical, reactive, and regression-averse</li>
+<li>b) Analytical, standard-compliant, consultative, and reactive</li>
+<li>c) Model-based, methodical, analytical, and consultative</li>
+<li>d) Regression-averse, consultative, reactive, and methodical</li>
+</ul>
+<h2 id="36-which-one-of-the-following-is-the-characteristic-of-a-metrics-based-approach-for-test-estimation"><a class="header" href="#36-which-one-of-the-following-is-the-characteristic-of-a-metrics-based-approach-for-test-estimation">36. Which one of the following is the characteristic of a metrics-based approach for test estimation?</a></h2>
+<ul>
+<li>a) Budget which was used by a previous similar test project</li>
+<li>b) Overall experience collected in interviews with test managers</li>
+<li>c) Estimation of effort for test automation agreed in the test team</li>
+<li>d) Average of calculations collected from business experts</li>
+</ul>
+<h2 id="37-as-a-test-manager-you-are-responsible-for-testing-the-following-parts-of-requirements"><a class="header" href="#37-as-a-test-manager-you-are-responsible-for-testing-the-following-parts-of-requirements">37. As a test manager you are responsible for testing the following parts of requirements:</a></h2>
+<ul>
+<li>R1 - Process anomalies</li>
+<li>R2 - Synchronization</li>
+<li>R3 - Approval</li>
+<li>R4 - Problem solving</li>
+<li>R5 - Financial data</li>
+<li>R6 - Diagram data</li>
+<li>R7 - Changes to the user profile</li>
+</ul>
+<h3 id="notation-logical-requirement-dependencies-a---b-means-that-b-depends-on-a"><a class="header" href="#notation-logical-requirement-dependencies-a---b-means-that-b-depends-on-a">Notation: Logical requirement dependencies (A -&gt; B means, that B depends on A):</a></h3>
+<p><img src="images/Q37.PNG" alt="Q37" /></p>
+<h3 id="which-one-of-the-following-options-structures-the-test-execution-schedule-according-to-the-requirement-dependencies"><a class="header" href="#which-one-of-the-following-options-structures-the-test-execution-schedule-according-to-the-requirement-dependencies">Which one of the following options structures the test execution schedule according to the requirement dependencies?</a></h3>
+<ul>
+<li>a) R1 ; R3 ; R4 ; R7 ; R2 ; R5 ; R6</li>
+<li>b) R1 ; R3 ; R2 ; R4 ; R7 ; R5 ; R6</li>
+<li>c) R1 ; R3 ; R2 ; R5 ; R6 ; R4 ; R7</li>
+<li>d) R1 ; R2 ; R5 ; R6 ; R3 ; R4 ; R7</li>
+</ul>
+<h2 id="38-you-are-testing-a-new-version-of-software-for-a-coffee-machine-the-machine-can-prepare-different-types-of-coffee-based-on-four-categories-ie-coffee-size-sugar-milk-and-syrup-the-criteria-are-as-follows"><a class="header" href="#38-you-are-testing-a-new-version-of-software-for-a-coffee-machine-the-machine-can-prepare-different-types-of-coffee-based-on-four-categories-ie-coffee-size-sugar-milk-and-syrup-the-criteria-are-as-follows">38. You are testing a new version of software for a coffee machine. The machine can prepare different types of coffee based on four categories. i.e., coffee size, sugar, milk, and syrup. The criteria are as follows:</a></h2>
+<ul>
+<li>Coffee size (small, medium, large)</li>
+<li>Sugar (none, 1 unit, 2 units, 3 units, 4 units)</li>
+<li>Milk (yes or no)</li>
+<li>Coffee flavor syrup (no syrup, caramel, hazelnut, vanilla)</li>
+</ul>
+<h3 id="now-you-are-writing-a-defect-report-with-the-following-information"><a class="header" href="#now-you-are-writing-a-defect-report-with-the-following-information">Now you are writing a defect report with the following information:</a></h3>
+<ul>
+<li>Title: Low coffee temperature.</li>
+<li>Short summary: When you select coffee with milk, the time for preparing coffee is
+too long and the temperature of the beverage is too low (less than 40 °C).</li>
+<li>Expected result: The temperature of coffee should be standard (about 75 °C).</li>
+<li>Degree of risk: Medium</li>
+<li>Priority: Normal</li>
+</ul>
+<h3 id="what-valuable-information-was-omitted-in-the-above-defect-report"><a class="header" href="#what-valuable-information-was-omitted-in-the-above-defect-report">What valuable information was omitted in the above defect report?</a></h3>
+<ul>
+<li>a) The actual test results</li>
+<li>b) Identification of the tested software version</li>
+<li>c) Status of the defect</li>
+<li>d) Ideas for improving the test case</li>
+</ul>
+<h2 id="39-which-one-of-the-following-is-most-likely-to-be-a-benefit-of-test-execution-tools"><a class="header" href="#39-which-one-of-the-following-is-most-likely-to-be-a-benefit-of-test-execution-tools">39. Which one of the following is MOST likely to be a benefit of test execution tools?</a></h2>
+<ul>
+<li>a) It is easy to create regression tests</li>
+<li>b) It is easy to maintain version control of test assets</li>
+<li>c) It is easy to design tests for security testing</li>
+<li>d) It is easy to run regression tests</li>
+</ul>
+<h2 id="40-which-one-of-the-following-test-tools-is-mostly-suitable-for-developers-rather-than-testers"><a class="header" href="#40-which-one-of-the-following-test-tools-is-mostly-suitable-for-developers-rather-than-testers">40. Which one of the following test tools is mostly suitable for developers rather than testers?</a></h2>
+<ul>
+<li>a) Requirement management tools</li>
+<li>b) Configuration management tools</li>
+<li>c) Static analysis tools</li>
+<li>d) Performance testing tools</li>
+</ul>
+<h1 id="answers"><a class="header" href="#answers">Answers</a></h1>
+<p><img src="images/answer1.PNG" alt="column 1" />
+<img src="images/answer2.PNG" alt="column 2" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="exercise_8.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="exercise_8.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
