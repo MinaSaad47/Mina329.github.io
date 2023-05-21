@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="exercise_1.html"><strong aria-hidden="true">1.</strong> Lecture 1 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_2.html"><strong aria-hidden="true">2.</strong> Lecture 2 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_3.html"><strong aria-hidden="true">3.</strong> Lecture 3 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_4.html"><strong aria-hidden="true">4.</strong> Lecture 4 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_5.html"><strong aria-hidden="true">5.</strong> Lecture 5 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_6.html"><strong aria-hidden="true">6.</strong> Lecture 6 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_7.html"><strong aria-hidden="true">7.</strong> Lecture 7 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_8.html" class="active"><strong aria-hidden="true">8.</strong> Lecture 8 Exercises</a></li><li class="chapter-item expanded "><a href="test_bank_3_4_5.html"><strong aria-hidden="true">9.</strong> Lectures 3 & 4 & 5 Test Bank ISTQB v1.7</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="exercise_1.html"><strong aria-hidden="true">1.</strong> Lecture 1 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_2.html"><strong aria-hidden="true">2.</strong> Lecture 2 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_3.html"><strong aria-hidden="true">3.</strong> Lecture 3 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_4.html"><strong aria-hidden="true">4.</strong> Lecture 4 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_5.html"><strong aria-hidden="true">5.</strong> Lecture 5 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_6.html"><strong aria-hidden="true">6.</strong> Lecture 6 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_7.html"><strong aria-hidden="true">7.</strong> Lecture 7 Exercises</a></li><li class="chapter-item expanded "><a href="exercise_8.html" class="active"><strong aria-hidden="true">8.</strong> Lecture 8 Exercises</a></li><li class="chapter-item expanded "><a href="test_bank.html"><strong aria-hidden="true">9.</strong> Test Bank</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -194,6 +194,10 @@
 <li>Manual data entry is often time consuming and error prone, but data load tools are available to make the process reliable and efficient.</li>
 <li>Specific tools are available to support test-first approaches, such as BDD, TDD, ATDD.</li>
 <li>Tools capture and log activities performed on an application during an exploratory test session</li>
+<li>how many defects are found per day or per  transaction</li>
+<li>number of defects found compared to number of user stories, effort, and/or quality attributes</li>
+<li>provides the test conditions to cover during a time-boxed testing session.</li>
+<li>uninterrupted period of testing, could last from 60-120 mints</li>
 </ol>
 <blockquote>
 <blockquote>
@@ -222,33 +226,40 @@
 <li><code>Test data load tools</code></li>
 <li><code>Automated test execution tools</code></li>
 <li><code>Exploratory test tools</code></li>
+<li><code>Defect intensity</code></li>
+<li><code>Defect density</code></li>
+<li><code>test charter</code></li>
+<li><code>Session</code></li>
 </ol>
 </blockquote>
 </blockquote>
 <h2 id="3-mention-test-quadrants"><a class="header" href="#3-mention-test-quadrants">3. Mention Test Quadrants</a></h2>
-<ul>
-<li>Q1 -&gt; Unit &amp; component tests.</li>
-<li>Q2 -&gt; Solution &amp; system acceptance tests.</li>
-<li>Q3 -&gt; Functional acceptance tests.</li>
-<li>Q4 -&gt; System qualities tests.</li>
-</ul>
+<div class="table-wrapper"><table><thead><tr><th>Quadrant Q1</th><th>Quadrant Q2</th><th>Quadrant Q3</th><th>Quadrant Q4</th></tr></thead><tbody>
+<tr><td>Unit level</td><td>System level</td><td>System or User acceptance level</td><td>System or Operational acceptance level</td></tr>
+<tr><td>Automated</td><td>Manual or Automated</td><td>Manual and User-Oriented</td><td>Automated</td></tr>
+<tr><td></td><td>Functional acceptance tests ex: story tests, user experience prototypes, and simulations</td><td>ex: Exploratory testing, scenarios, process flows, usability testing, user acceptance testing, alpha testing, and beta testing</td><td>Qualities tests ex: performance, load, stress, and scalability tests, security tests, maintainability, memory management, compatibility and interoperability, data migration, infrastructure, and recovery testing.</td></tr>
+</tbody></table>
+</div>
 <h2 id="4-agile-tester-skills"><a class="header" href="#4-agile-tester-skills">4. Agile Tester Skills</a></h2>
 <ol>
 <li>Competent in test automation, TDD, BDD, ATDD, white-box, black-box, experience testing.</li>
 <li>positive and solution-oriented with team members.</li>
+<li>Actively acquire information from stakeholders</li>
 <li>Accurately evaluate and report test results.</li>
 <li>Plan and organize their own work.</li>
 <li>Respond to change quickly.</li>
+<li>Collaborative.</li>
 </ol>
 <h2 id="5-agile-tester-role"><a class="header" href="#5-agile-tester-role">5. Agile Tester Role</a></h2>
 <ol>
 <li>Understanding, implementing, and updating test strategy.</li>
 <li>Measuring and reporting test coverage.</li>
 <li>Ensuring proper use of testing tools.</li>
-<li>Configuring, using, and managing test environments and test data.</li>
+<li>Actively collaborating with developers and business stakeholders.</li>
 <li>Reporting defects and working with the team to resolve them.</li>
+<li>Participating in team retrospectives.</li>
 </ol>
-<h2 id="6-mention-common-estimation-techniques-used-in-agile-projects"><a class="header" href="#6-mention-common-estimation-techniques-used-in-agile-projects">6. Mention Common estimation techniques used in Agile projects</a></h2>
+<h2 id="6-mention-common-estimation-testing-effort-techniques-used-in-agile-projects-based-on-content-and-risk"><a class="header" href="#6-mention-common-estimation-testing-effort-techniques-used-in-agile-projects-based-on-content-and-risk">6. Mention Common estimation testing effort techniques used in Agile projects based on content and risk</a></h2>
 <ol>
 <li>planning poker.</li>
 <li>T-shirt sizing.</li>
@@ -265,6 +276,65 @@
 <li>instant messaging.</li>
 <li>desktop sharing.</li>
 </ol>
+<h2 id="9-tester-role-in-scrum-projects"><a class="header" href="#9-tester-role-in-scrum-projects">9. Tester role in scrum projects</a></h2>
+<ol>
+<li>Cross-functional</li>
+<li>Self-organizing</li>
+<li>Co-located</li>
+<li>Collaborative</li>
+<li>Empowered</li>
+<li>Committed</li>
+<li>Transparent</li>
+<li>Credible</li>
+<li>Open to feedback</li>
+<li>Resilient</li>
+</ol>
+<h2 id="10-activities-of-sprint-zero"><a class="header" href="#10-activities-of-sprint-zero">10. Activities of sprint zero</a></h2>
+<ol>
+<li>Identify the scope of the project</li>
+<li>Create an initial system architecture</li>
+<li>Plan, acquire, and install needed tools</li>
+<li>Create an initial test strategy</li>
+<li>Perform an initial quality risk analysis</li>
+<li>Create the task board</li>
+</ol>
+<h2 id="11-quality-risk-analysis-during-iteration-planning"><a class="header" href="#11-quality-risk-analysis-during-iteration-planning">11. Quality Risk Analysis During Iteration Planning</a></h2>
+<ol>
+<li>Gather the Agile team members together</li>
+<li>List all the backlog items for the current iteration</li>
+<li>Identify the quality risks</li>
+<li>Assess each identified risk
+<ul>
+<li>categorizing the risk</li>
+<li>determining its level of risk</li>
+</ul>
+</li>
+<li>Determine the extent of testing</li>
+<li>Select the appropriate test technique(s) to reduce each risk</li>
+<li>The tester then designs, implements, and executes tests to mitigate the risks.</li>
+</ol>
+<h2 id="12-mention-the-topics-that-is-addressed-by-acceptance-criteria"><a class="header" href="#12-mention-the-topics-that-is-addressed-by-acceptance-criteria">12. Mention the topics that is addressed by acceptance criteria</a></h2>
+<ol>
+<li>Functional behavior</li>
+<li>Quality characteristics</li>
+<li>Scenarios</li>
+<li>Business rules</li>
+<li>External interfaces</li>
+<li>Constraints</li>
+<li>Data definitions</li>
+</ol>
+<h2 id="13-mention-uses-of-physical-storytask-boards-in-agile-teams"><a class="header" href="#13-mention-uses-of-physical-storytask-boards-in-agile-teams">13. Mention uses of physical story/task boards in agile teams</a></h2>
+<ol>
+<li>Record stories</li>
+<li>capture team members' estimates on there task and calculate efforts</li>
+<li>Provide a visual representation</li>
+<li>Integrate with configuration management tools</li>
+</ol>
+<h2 id="14-benefits-of-desktop-sharing-and-capturing-tools"><a class="header" href="#14-benefits-of-desktop-sharing-and-capturing-tools">14. Benefits of desktop sharing and capturing tools</a></h2>
+<ol>
+<li>Used for distributed teams, product demonstrations, code reviews, and even pairing.</li>
+<li>Capturing product demonstrations at the end of each iteration.</li>
+</ol>
 
                     </main>
 
@@ -274,7 +344,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="test_bank_3_4_5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="test_bank.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -288,7 +358,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="test_bank_3_4_5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="test_bank.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
